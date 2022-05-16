@@ -3,7 +3,7 @@
 const express = require('express');
 const cors = require('cors');
 
-// const authRoutes = require('./auth/routes');
+const authRoutes = require('./auth/routes');
 
 
 const app = express();
@@ -16,7 +16,7 @@ app.get('/', (request, response, next) => {
   response.send('King Snorlax Welcomes You To His Server');
 });
 
-// app.use(authRoutes);
+app.use(authRoutes);
 
 module.exports = {
   server: app,
